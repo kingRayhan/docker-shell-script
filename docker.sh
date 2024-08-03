@@ -27,6 +27,11 @@ function install_docker {
 
     echo "Docker installed successfully!"
     docker --version
+
+    echo "Adding current user to the docker group..."
+    sudo usermod -aG docker $USER
+
+    echo "Docker group addition complete. You may need to log out and back in for changes to take effect."
 }
 
 function uninstall_docker {
