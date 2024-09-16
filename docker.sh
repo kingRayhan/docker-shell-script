@@ -28,8 +28,8 @@ function install_docker {
     echo "Docker installed successfully!"
     docker --version
 
-    echo "Create docker group"
-    sudo groupadd docker
+    ## echo "Create docker group"
+    ## sudo groupadd docker
 
     echo "Adding current user to the docker group..."
     sudo usermod -aG docker $USER
